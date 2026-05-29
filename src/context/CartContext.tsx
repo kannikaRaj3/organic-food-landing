@@ -29,6 +29,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cartCount, setCartCount] = useState(0);
   const [cartTotal, setCartTotal] = useState(0);
+  const [isInitialized, setIsInitialized] = useState(false);
 
   // Load cart from localStorage on mount
   useEffect(() => {
@@ -40,18 +41,21 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
         console.error("Error parsing cart data", e);
       }
     }
+    setIsInitialized(true);
   }, []);
 
   // Save cart to localStorage and calculate totals whenever cartItems changes
   useEffect(() => {
-    localStorage.setItem("vert_cart", JSON.stringify(cartItems));
+    if (isInitialized) {
+      localStorage.setItem("vert_cart", JSON.stringify(cartItems));
+    }
     
     const count = cartItems.reduce((total, item) => total + item.quantity, 0);
     const total = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
     
     setCartCount(count);
     setCartTotal(Number(total.toFixed(2)));
-  }, [cartItems]);
+  }, [cartItems, isInitialized]);
 
   const addToCart = (newItem: Omit<CartItem, "quantity">) => {
     setCartItems((prevItems) => {

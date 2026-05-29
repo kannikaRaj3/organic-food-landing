@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 
 interface AnimatedRevealProps {
   children: React.ReactNode;
@@ -34,7 +34,7 @@ export const AnimatedReveal: React.FC<AnimatedRevealProps> = ({
 
   const offset = directionOffsets[direction];
 
-  const variants = {
+  const variants: Variants = {
     hidden: {
       opacity: 0,
       y: offset.y,
@@ -47,7 +47,7 @@ export const AnimatedReveal: React.FC<AnimatedRevealProps> = ({
       transition: {
         duration: duration,
         delay: delay,
-        ease: [0.215, 0.61, 0.355, 1], // easeOutCubic
+        ease: [0.215, 0.61, 0.355, 1] as const, // easeOutCubic
       },
     },
   };

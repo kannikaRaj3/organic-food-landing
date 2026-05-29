@@ -24,7 +24,7 @@ export const Hero: React.FC = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: [0.215, 0.61, 0.355, 1] },
+      transition: { duration: 0.8, ease: [0.215, 0.61, 0.355, 1] as const },
     },
   };
 
@@ -120,7 +120,7 @@ export const Hero: React.FC = () => {
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] as const }}
             className="relative z-10 w-[240px] sm:w-[340px] lg:w-[390px] aspect-square rounded-full overflow-hidden shadow-2xl shadow-black/15 border-4 border-[#FFF8EE]"
           >
             <Image
@@ -150,6 +150,7 @@ export const Hero: React.FC = () => {
                 src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=200&auto=format&fit=crop"
                 alt="Floating Strawberry slice"
                 fill
+                priority
                 className="object-cover"
                 sizes="64px"
               />
