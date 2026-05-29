@@ -17,7 +17,7 @@ export const featuredProducts: Product[] = [
     category: "Vegetables",
     price: 4.89,
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1595855759920-86582396756a?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?q=80&w=600&auto=format&fit=crop",
     description: "Earthy, sweet, and sun-ripened on family farm vines. Perfect for salads and artisanal sauces.",
     badge: "Best Seller",
     unit: "lb"
@@ -28,7 +28,7 @@ export const featuredProducts: Product[] = [
     category: "Pantry",
     price: 8.99,
     rating: 4.8,
-    image: "https://images.unsplash.com/photo-1508061253366-f7da158b6d9b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1508815122820-2215947cc21c?q=80&w=600&auto=format&fit=crop",
     description: "Premium single-origin nonpareil almonds, steam-pasteurized. Rich in nutrients and vitamin E.",
     badge: "New Arrival",
     unit: "12 oz"
@@ -39,7 +39,7 @@ export const featuredProducts: Product[] = [
     category: "Bakery",
     price: 6.50,
     rating: 5.0,
-    image: "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1585478259715-876acc5be8eb?q=80&w=600&auto=format&fit=crop",
     description: "Slow-fermented for 36 hours. Open crumb, golden crispy crust, infused with wild garden rosemary.",
     unit: "loaf"
   },
@@ -60,7 +60,7 @@ export const featuredProducts: Product[] = [
     category: "Pantry",
     price: 7.49,
     rating: 4.7,
-    image: "https://images.unsplash.com/photo-1585834925828-48b7b7522d0d?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1589314418659-197e4125860d?q=80&w=600&auto=format&fit=crop",
     description: "Light-halved walnuts harvested from organic California groves. Raw, unsalted, and brain-boosting.",
     unit: "8 oz"
   },
@@ -70,7 +70,7 @@ export const featuredProducts: Product[] = [
     category: "Pantry",
     price: 11.20,
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1590502593747-42a996133562?q=80&w=600&auto=format&fit=crop",
     description: "Cold-extracted, unfiltered honey straight from pristine woodland hives. Deep rich amber color.",
     badge: "Limited Stock",
     unit: "16 oz"
