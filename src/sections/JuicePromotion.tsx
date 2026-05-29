@@ -51,7 +51,7 @@ const JuiceBottle: React.FC<BottleProps> = ({
         {/* Minimalist Label */}
         <div className="w-18 h-28 bg-[#FFFDF9]/95 rounded-xl border border-organic-green/5 shadow-sm p-2 flex flex-col justify-between items-center text-center">
           <div className="flex flex-col items-center">
-            <span className="font-serif text-[10px] tracking-wider text-organic-sage uppercase font-bold">VÉRT</span>
+            <span className="font-serif text-[10px] tracking-wider text-organic-sage uppercase font-bold">Kannu</span>
             <div className="h-0.5 w-4 bg-organic-sage/40 my-1" />
           </div>
           <div>

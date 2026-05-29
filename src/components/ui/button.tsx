@@ -6,8 +6,6 @@ import { motion, HTMLMotionProps } from "framer-motion";
 interface ButtonProps extends HTMLMotionProps<"button"> {
   variant?: "primary" | "secondary" | "yellow" | "outline" | "ghost" | "glass";
   size?: "sm" | "md" | "lg" | "icon";
-  children: React.ReactNode;
-  className?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({

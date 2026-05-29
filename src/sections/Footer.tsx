@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
                 <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.47.16.03.3-.06.3-.22v-1.92c-3.14-.1-4.88-1.78-4.88-4.25 0-2.22 1.39-3.79 3.65-4.26a.5.5 0 0 0 .38-.56C8.16 8.5 9.77 6.9 12 6.9s3.84 1.6 3.71 3.37a.5.5 0 0 0 .38.56c2.26.47 3.65 2.04 3.65 4.26 0 2.47-1.74 4.15-4.88 4.25v1.92c0 .16.14.25.3.22C19.13 20.17 22 16.42 22 12c0-5.52-4.48-10-10-10zm.5 12c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5z" />
               </svg>
               <span className="font-serif text-2xl font-bold tracking-tight text-white">
-                VÉRT
+                Kannu
               </span>
             </a>
             <p className="text-xs text-organic-cream/70 leading-relaxed max-w-sm">
@@ -116,11 +116,11 @@ export const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="h-4.5 w-4.5 text-organic-yellow flex-shrink-0" />
-                <span>+1 (800) 555-VERT</span>
+                <span>+1 (800) 555-KANNU</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="h-4.5 w-4.5 text-organic-yellow flex-shrink-0" />
-                <span>concierge@vert-market.com</span>
+                <span>concierge@kannu-market.com</span>
               </li>
             </ul>
           </div>
@@ -130,7 +130,7 @@ export const Footer: React.FC = () => {
         {/* Footer Bottom Bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between pt-8 text-[11px] text-organic-cream/45 space-y-4 sm:space-y-0">
           <div>
-            <span>© {currentYear} VÉRT Inc. All rights reserved. Crafted for health.</span>
+            <span>© {currentYear} Kannu Inc. All rights reserved. Crafted for health.</span>
           </div>
           <div className="flex gap-6">
             <a href="#" className="hover:text-organic-yellow transition-colors">Privacy Policy</a>

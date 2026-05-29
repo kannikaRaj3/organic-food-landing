@@ -123,7 +123,7 @@ export const IngredientStory: React.FC = () => {
             “To eat organic is to align yourself with the slow, magnificent rhythm of the earth.”
           </p>
           <span className="block mt-3 text-xs uppercase tracking-wider font-semibold text-organic-sage">
-            — VÉRT Editorial Journal, Issue 04
+            — Kannu Editorial Journal, Issue 04
           </span>
         </AnimatedReveal>
       </div>

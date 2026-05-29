@@ -56,7 +56,7 @@ export const Navbar: React.FC = () => {
               <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.47.16.03.3-.06.3-.22v-1.92c-3.14-.1-4.88-1.78-4.88-4.25 0-2.22 1.39-3.79 3.65-4.26a.5.5 0 0 0 .38-.56C8.16 8.5 9.77 6.9 12 6.9s3.84 1.6 3.71 3.37a.5.5 0 0 0 .38.56c2.26.47 3.65 2.04 3.65 4.26 0 2.47-1.74 4.15-4.88 4.25v1.92c0 .16.14.25.3.22C19.13 20.17 22 16.42 22 12c0-5.52-4.48-10-10-10zm.5 12c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5z" />
             </svg>
             <span className="font-serif text-2xl font-bold tracking-tight text-organic-green">
-              VÉRT
+              Kannu
             </span>
           </a>
 
@@ -141,7 +141,7 @@ export const Navbar: React.FC = () => {
               <div>
                 <div className="flex justify-between items-center mb-10">
                   <span className="font-serif text-2xl font-bold tracking-tight text-organic-green">
-                    VÉRT
+                    Kannu
                   </span>
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
@@ -199,7 +199,7 @@ export const Navbar: React.FC = () => {
               >
                 <X className="h-5 w-5" />
               </button>
-              <h3 className="font-serif text-xl font-bold text-organic-green mb-4">Search VÉRT Market</h3>
+              <h3 className="font-serif text-xl font-bold text-organic-green mb-4">Search Kannu Market</h3>
               <div className="flex gap-2">
                 <input
                   type="text"
@@ -358,7 +358,7 @@ export const Navbar: React.FC = () => {
 
                   <div className="text-center">
                     <span className="text-[10px] text-organic-darkGreen/40 font-medium">
-                      🔒 Secured organic transactional checkout by VÉRT
+                      🔒 Secured organic transactional checkout by Kannu
                     </span>
                   </div>
                 </div>

@@ -16,12 +16,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "VÉRT | Premium Organic Food & Grocery Marketplace",
-  description: "Experience organic luxury. VÉRT delivers fresh, handcrafted organic foods, artisanal breads, and farm-fresh ingredients straight to your door.",
+  title: "Kannu | Premium Organic Food & Grocery Marketplace",
+  description: "Experience organic luxury. Kannu delivers fresh, handcrafted organic foods, artisanal breads, and farm-fresh ingredients straight to your door.",
   keywords: "organic food, luxury grocery, healthy marketplace, fresh vegetables, organic berries, farm fresh delivery, artisan sourdough",
   openGraph: {
-    title: "VÉRT | Premium Organic Food & Grocery Marketplace",
-    description: "Experience organic luxury. VÉRT delivers fresh, handcrafted organic foods, artisanal breads, and farm-fresh ingredients straight to your door.",
+    title: "Kannu | Premium Organic Food & Grocery Marketplace",
+    description: "Experience organic luxury. Kannu delivers fresh, handcrafted organic foods, artisanal breads, and farm-fresh ingredients straight to your door.",
     type: "website",
     locale: "en_US",
   },
