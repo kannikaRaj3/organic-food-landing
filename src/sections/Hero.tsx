@@ -124,7 +124,7 @@ export const Hero: React.FC = () => {
             className="relative z-10 w-[240px] sm:w-[340px] lg:w-[390px] aspect-square rounded-full overflow-hidden shadow-2xl shadow-black/15 border-4 border-[#FFF8EE]"
           >
             <Image
-              src="https://images.unsplash.com/photo-1554313511-8951239aa64b?q=80&w=800&auto=format&fit=crop"
+              src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?q=80&w=800&auto=format&fit=crop"
               alt="Premium Bowl of Organic Berries and Fruits"
               fill
               priority
