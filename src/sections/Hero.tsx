@@ -53,7 +53,7 @@ export const Hero: React.FC = () => {
             className="inline-flex items-center gap-1.5 self-start bg-organic-green text-white text-xs font-semibold px-4 py-2 rounded-full shadow-sm mb-6"
           >
             <Leaf className="h-3.5 w-3.5 fill-current text-organic-yellow" />
-            <span>100% Certified Organic grocery marketplace</span>
+            <span>Premium Organic Dry Fruits & Seeds Marketplace</span>
           </motion.div>
 
           {/* Heading */}
@@ -61,9 +61,9 @@ export const Hero: React.FC = () => {
             variants={textItemVariants}
             className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.08] mb-6 font-serif"
           >
-            Fresh Organic <br />
-            Food Delivered <br />
-            <span className="text-organic-green font-light italic">To Your Door</span>
+            Nourish Your Body <br />
+            With Nature&apos;s <br />
+            <span className="text-organic-green font-light italic">Superfoods</span>
           </motion.h1>
 
           {/* Supporting Paragraph */}
@@ -71,8 +71,8 @@ export const Hero: React.FC = () => {
             variants={textItemVariants}
             className="text-sm md:text-base text-organic-darkGreen/85 max-w-lg mb-8 leading-relaxed"
           >
-            Sourced directly from certified family farms. Experience gourmet local ingredients, 
-            artisan bakery loaves, and sun-ripened berries with eco-friendly express courier delivery.
+            Sourced directly from certified organic groves. Experience premium roasted nuts, 
+            sun-dried fruits, and nutrient-dense seeds delivered with eco-friendly express courier delivery.
           </motion.p>
 
           {/* Action buttons */}
@@ -116,7 +116,7 @@ export const Hero: React.FC = () => {
             className="absolute h-[250px] sm:h-[350px] w-[250px] sm:w-[350px] rounded-full bg-[#FFF8EE]/40 blur-3xl pointer-events-none"
           />
 
-          {/* Central Bowl of Berries */}
+          {/* Central Bowl of Dry Fruits/Nuts */}
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -124,8 +124,8 @@ export const Hero: React.FC = () => {
             className="relative z-10 w-[240px] sm:w-[340px] lg:w-[390px] aspect-square rounded-full overflow-hidden shadow-2xl shadow-black/15 border-4 border-[#FFF8EE]"
           >
             <Image
-              src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?q=80&w=800&auto=format&fit=crop"
-              alt="Premium Bowl of Organic Berries and Fruits"
+              src="https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?q=80&w=800&auto=format&fit=crop"
+              alt="Premium Bowl of Organic Dry Fruits and Nuts"
               fill
               priority
               className="object-cover"
@@ -135,7 +135,7 @@ export const Hero: React.FC = () => {
 
           {/* FLOATING DECORATIONS */}
           
-          {/* Floating Raspberry - Top Left */}
+          {/* Floating Almond - Top Left */}
           <motion.div
             animate={{
               y: [0, -12, 0],
@@ -147,8 +147,8 @@ export const Hero: React.FC = () => {
           >
             <div className="relative w-full h-full rounded-full overflow-hidden border border-white/20 shadow-md">
               <Image
-                src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=200&auto=format&fit=crop"
-                alt="Floating Strawberry slice"
+                src="https://images.unsplash.com/photo-1508815122820-2215947cc21c?q=80&w=200&auto=format&fit=crop"
+                alt="Floating Almond"
                 fill
                 priority
                 className="object-cover"
@@ -157,7 +157,7 @@ export const Hero: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Floating Orange - Middle Right */}
+          {/* Floating Cashew - Middle Right */}
           <motion.div
             animate={{
               y: [0, 15, 0],
@@ -169,8 +169,8 @@ export const Hero: React.FC = () => {
           >
             <div className="relative w-full h-full rounded-full overflow-hidden border border-white/20 shadow-md">
               <Image
-                src="https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?q=80&w=200&auto=format&fit=crop"
-                alt="Floating Citrus Slice"
+                src="https://images.unsplash.com/photo-1509070016581-915335451d79?q=80&w=200&auto=format&fit=crop"
+                alt="Floating Cashew"
                 fill
                 className="object-cover"
                 sizes="80px"
@@ -178,7 +178,7 @@ export const Hero: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Floating Blueberry - Bottom Left */}
+          {/* Floating Walnut - Bottom Left */}
           <motion.div
             animate={{
               y: [0, 10, 0],
@@ -189,8 +189,8 @@ export const Hero: React.FC = () => {
           >
             <div className="w-8 h-8 rounded-full overflow-hidden relative">
               <Image
-                src="https://images.unsplash.com/photo-1498557850523-fd3d118b962e?q=80&w=200&auto=format&fit=crop"
-                alt="Floating Blueberry"
+                src="https://images.unsplash.com/photo-1589314418659-197e4125860d?q=80&w=200&auto=format&fit=crop"
+                alt="Floating Walnut"
                 fill
                 className="object-cover"
                 sizes="40px"

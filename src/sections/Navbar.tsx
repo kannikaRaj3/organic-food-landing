@@ -49,12 +49,13 @@ export const Navbar: React.FC = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Custom Organic Logo */}
           <a href="#home" className="flex items-center gap-2 group">
-            <svg
-              className="h-7 w-7 text-organic-green group-hover:rotate-12 transition-transform duration-300 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.47.16.03.3-.06.3-.22v-1.92c-3.14-.1-4.88-1.78-4.88-4.25 0-2.22 1.39-3.79 3.65-4.26a.5.5 0 0 0 .38-.56C8.16 8.5 9.77 6.9 12 6.9s3.84 1.6 3.71 3.37a.5.5 0 0 0 .38.56c2.26.47 3.65 2.04 3.65 4.26 0 2.47-1.74 4.15-4.88 4.25v1.92c0 .16.14.25.3.22C19.13 20.17 22 16.42 22 12c0-5.52-4.48-10-10-10zm.5 12c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5z" />
-            </svg>
+            <Image
+              src="/favicon.ico"
+              alt="Kannu Logo"
+              width={28}
+              height={28}
+              className="group-hover:rotate-12 transition-transform duration-300"
+            />
             <span className="font-serif text-2xl font-bold tracking-tight text-organic-green">
               Kannu
             </span>
@@ -140,9 +141,17 @@ export const Navbar: React.FC = () => {
             >
               <div>
                 <div className="flex justify-between items-center mb-10">
-                  <span className="font-serif text-2xl font-bold tracking-tight text-organic-green">
-                    Kannu
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <Image
+                      src="/favicon.ico"
+                      alt="Kannu Logo"
+                      width={28}
+                      height={28}
+                    />
+                    <span className="font-serif text-2xl font-bold tracking-tight text-organic-green">
+                      Kannu
+                    </span>
+                  </div>
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="p-2 text-organic-darkGreen/60 hover:text-organic-green rounded-full border border-organic-green/10"

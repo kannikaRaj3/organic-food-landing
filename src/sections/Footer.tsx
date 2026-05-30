@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Phone, MapPin, Compass } from "lucide-react";
+import Image from "next/image";
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -20,18 +21,18 @@ export const Footer: React.FC = () => {
           {/* Brand Info */}
           <div className="md:col-span-4 space-y-6">
             <a href="#home" className="flex items-center gap-2">
-              <svg
-                className="h-7 w-7 text-organic-yellow fill-current"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.47.16.03.3-.06.3-.22v-1.92c-3.14-.1-4.88-1.78-4.88-4.25 0-2.22 1.39-3.79 3.65-4.26a.5.5 0 0 0 .38-.56C8.16 8.5 9.77 6.9 12 6.9s3.84 1.6 3.71 3.37a.5.5 0 0 0 .38.56c2.26.47 3.65 2.04 3.65 4.26 0 2.47-1.74 4.15-4.88 4.25v1.92c0 .16.14.25.3.22C19.13 20.17 22 16.42 22 12c0-5.52-4.48-10-10-10zm.5 12c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5z" />
-              </svg>
+              <Image
+                src="/favicon.ico"
+                alt="Kannu Logo"
+                width={28}
+                height={28}
+              />
               <span className="font-serif text-2xl font-bold tracking-tight text-white">
                 Kannu
               </span>
             </a>
             <p className="text-xs text-organic-cream/70 leading-relaxed max-w-sm">
-              An award-winning boutique marketplace dedicated to pure organic gastronomy, ethical local farming, and carbon-neutral community delivery.
+              An award-winning boutique marketplace dedicated to pure organic dry fruits, nutrient-dense seeds, and ethical farming practices.
             </p>
             
             {/* Socials */}
@@ -86,11 +87,11 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-2 space-y-4">
             <h4 className="font-serif text-sm font-bold text-white uppercase tracking-wider">Market Pantry</h4>
             <ul className="space-y-2 text-xs text-organic-cream/65">
-              <li><a href="#products" className="hover:text-organic-yellow transition-colors">Fresh Vegetables</a></li>
-              <li><a href="#products" className="hover:text-organic-yellow transition-colors">Sun-Ripened Berries</a></li>
-              <li><a href="#products" className="hover:text-organic-yellow transition-colors">Artisanal Bakery</a></li>
-              <li><a href="#products" className="hover:text-organic-yellow transition-colors">Raw Nuts & Seeds</a></li>
-              <li><a href="#products" className="hover:text-organic-yellow transition-colors">Cold-Pressed Juices</a></li>
+              <li><a href="#products" className="hover:text-organic-yellow transition-colors">Roasted Nuts</a></li>
+              <li><a href="#products" className="hover:text-organic-yellow transition-colors">Sun-Dried Fruits</a></li>
+              <li><a href="#products" className="hover:text-organic-yellow transition-colors">Organic Seeds</a></li>
+              <li><a href="#products" className="hover:text-organic-yellow transition-colors">Trail Mixes</a></li>
+              <li><a href="#products" className="hover:text-organic-yellow transition-colors">Nut Butters</a></li>
             </ul>
           </div>
 

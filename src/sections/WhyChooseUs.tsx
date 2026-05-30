@@ -140,7 +140,7 @@ export const WhyChooseUs: React.FC = () => {
           <AnimatedReveal direction="left" delay={0.1}>
             <SectionTitle
               subtitle="The Organic Promise"
-              title="Why Conscious Shoppers Choose VÉRT"
+              title="Why Conscious Shoppers Choose Kannu"
               description="We bridge the gap between dedicated bio-farms and your dining table. Our principles ensure maximum taste, top environmental ethics, and complete supply-chain transparency."
               align="left"
               className="mb-8"

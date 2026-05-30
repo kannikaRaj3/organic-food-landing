@@ -31,7 +31,7 @@ const testimonials: Testimonial[] = [
     role: "Integrative Nutritionist",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=120&auto=format&fit=crop",
     rating: 5,
-    quote: "I recommend VÉRT to all my patients. Sourcing clean, organic whole foods with documented chemical-free growing practices is vital. Their cold-pressed elixirs are a masterpiece.",
+    quote: "I recommend Kannu to all my patients. Sourcing clean, organic whole foods with documented chemical-free growing practices is vital. Their cold-pressed elixirs are a masterpiece.",
   },
   {
     id: "test-3",
@@ -39,7 +39,7 @@ const testimonials: Testimonial[] = [
     role: "Sustainable Designer",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=120&auto=format&fit=crop",
     rating: 5,
-    quote: "I am wowed by their fully compostable delivery pulp and electric fleet dispatch. VÉRT proves that luxury organic gastronomy and environment protection can coexist.",
+    quote: "I am wowed by their fully compostable delivery pulp and electric fleet dispatch. Kannu proves that luxury organic gastronomy and environment protection can coexist.",
   },
 ];
 

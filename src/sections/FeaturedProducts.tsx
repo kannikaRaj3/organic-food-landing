@@ -9,7 +9,7 @@ import AnimatedReveal from "@/components/ui/animated-reveal";
 export const FeaturedProducts: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   
-  const categories = ["All", "Fruits", "Vegetables", "Pantry", "Bakery"];
+  const categories = ["All", "Nuts", "Seeds", "Dry Fruits"];
 
   const filteredProducts = activeCategory === "All"
     ? featuredProducts

@@ -30,7 +30,7 @@ export const Newsletter: React.FC = () => {
           <AnimatedReveal direction="up" delay={0.1}>
             <SectionTitle
               subtitle="The Newsletter"
-              title="Subscribe to VÉRT Journal"
+              title="Subscribe to Kannu Journal"
               description="Receive curated organic recipe guides, seasonal harvest schedules, and a $10 coupon towards your first basket order."
               align="center"
               className="mb-8"
@@ -49,7 +49,7 @@ export const Newsletter: React.FC = () => {
                 <div>
                   <h4 className="font-sans font-bold text-sm">Welcome to the Journal!</h4>
                   <p className="text-xs text-emerald-700/90 leading-relaxed mt-1">
-                    Your organic coupon code and welcome packet have been dispatched to your email. We are thrilled to have you in the VÉRT community.
+                    Your organic coupon code and welcome packet have been dispatched to your email. We are thrilled to have you in the Kannu community.
                   </p>
                 </div>
               </motion.div>
