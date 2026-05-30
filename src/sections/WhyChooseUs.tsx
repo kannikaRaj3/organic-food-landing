@@ -96,8 +96,8 @@ export const WhyChooseUs: React.FC = () => {
             className="relative z-10 w-[92%] h-[92%] rounded-[2.5rem] overflow-hidden shadow-lg border border-organic-green/10"
           >
             <Image
-              src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?q=80&w=600&auto=format&fit=crop"
-              alt="Harvested organic vegetables in a basket"
+              src="https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?q=80&w=600&auto=format&fit=crop"
+              alt="Premium selection of organic dry fruits and nuts"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 500px"

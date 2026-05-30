@@ -52,32 +52,32 @@ const CollageItem: React.FC<CollageItemProps> = ({
 export const IngredientStory: React.FC = () => {
   const storyItems = [
     {
-      image: "https://images.unsplash.com/photo-1590502593747-42a996133562?q=80&w=400&auto=format&fit=crop",
-      title: "Sicilian Citrus",
-      description: "Sun-drenched lemons and blood oranges packed with organic Vitamin C, hand-harvested from coastal orchards.",
+      image: "https://images.unsplash.com/photo-1536620948473-5ec585e7a9fd?q=80&w=400&auto=format&fit=crop",
+      title: "Turkish Figs",
+      description: "Caramel-like mission figs, sun-dried in the Aegean hills to concentrate their natural sugars and minerals.",
       rotation: "lg:rotate-2 hover:rotate-0",
       size: "w-full sm:w-[260px] lg:w-[270px] self-start",
       delay: 0.1,
     },
     {
-      image: "https://images.unsplash.com/photo-1541832676-9b763b0239ab?q=80&w=400&auto=format&fit=crop",
-      title: "Ancient Grain Flour",
-      description: "Organic stone-ground heirloom flour containing high nutritional trace elements, native wheat proteins.",
+      image: "https://images.unsplash.com/photo-1596720426673-e483d74ed721?q=80&w=400&auto=format&fit=crop",
+      title: "Black Chia Seeds",
+      description: "Premium omega-rich seeds sourced from sustainable highland cooperatives in Central America.",
       rotation: "lg:-rotate-3 hover:rotate-0",
       size: "w-full sm:w-[260px] lg:w-[270px] self-center lg:-translate-y-8",
       delay: 0.2,
     },
     {
-      image: "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?q=80&w=400&auto=format&fit=crop",
-      title: "Wild Blackberries",
-      description: "Deep mountain blackberries handpicked at dawn. Rich in anthocyanins and wild forest sugars.",
+      image: "https://images.unsplash.com/photo-1527324688151-0e627063f2b1?q=80&w=400&auto=format&fit=crop",
+      title: "Aegean Pistachios",
+      description: "Vibrant green pistachios, dry-roasted at the farm gate to preserve their delicate oils and crunch.",
       rotation: "lg:rotate-3 hover:rotate-0",
       size: "w-full sm:w-[260px] lg:w-[270px] self-end lg:translate-y-4",
       delay: 0.3,
     },
     {
-      image: "https://images.unsplash.com/photo-1508061253366-f7da158b6d9b?q=80&w=400&auto=format&fit=crop",
-      title: "Earthy Walnuts",
+      image: "https://images.unsplash.com/photo-1589314418659-197e4125860d?q=80&w=400&auto=format&fit=crop",
+      title: "California Walnuts",
       description: "Slow-dried shelled walnuts from organic growers, containing highly active omega-3 fats.",
       rotation: "lg:-rotate-2 hover:rotate-0",
       size: "w-full sm:w-[260px] lg:w-[270px] self-start lg:-translate-y-12",
@@ -94,9 +94,9 @@ export const IngredientStory: React.FC = () => {
         {/* Section Header */}
         <AnimatedReveal direction="up" delay={0.1}>
           <SectionTitle
-            subtitle="The Ingredient Story"
+            subtitle="The Superfood Story"
             title="Sourced with Pure Integrity"
-            description="We believe in foods that have a history. We trace each ingredient to its native soil, collaborating only with farmers who prioritize regenerative organic farming."
+            description="We believe in foods that have a history. We trace each nut, seed, and dry fruit to its native soil, collaborating only with farmers who prioritize regenerative organic farming."
             align="center"
             className="mb-16"
           />
@@ -120,7 +120,7 @@ export const IngredientStory: React.FC = () => {
         {/* Editorial Text Footnote */}
         <AnimatedReveal direction="up" delay={0.4} className="mt-16 text-center max-w-lg">
           <p className="font-serif italic text-lg md:text-xl text-organic-green">
-            “To eat organic is to align yourself with the slow, magnificent rhythm of the earth.”
+            “True nourishment comes from the heart of nature, preserved in its most concentrated form.”
           </p>
           <span className="block mt-3 text-xs uppercase tracking-wider font-semibold text-organic-sage">
             — Kannu Editorial Journal, Issue 04
