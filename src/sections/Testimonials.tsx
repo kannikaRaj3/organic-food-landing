@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { Quote, Star } from "lucide-react";
 import SectionTitle from "@/components/ui/section-title";
 import AnimatedReveal from "@/components/ui/animated-reveal";
 
@@ -19,27 +19,27 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: "test-1",
-    name: "Eleanor Sterling",
-    role: "Culinary Blogger & Pastry Chef",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120&auto=format&fit=crop",
+    name: "Roasted Almonds",
+    role: "Premium California Grade",
+    image: "https://images.unsplash.com/photo-1508815122820-2215947cc21c?q=80&w=200&auto=format&fit=crop",
     rating: 5,
-    quote: "The rosemary sourdough is absolutely exquisite! Sourdough of this caliber is rare. The tomatoes arrived smelling of fresh soil—unmistakable proof of true vine-ripening.",
+    quote: "The roasting level is absolutely exquisite! These almonds maintain a perfect crunch and deep nutty profile that is rare to find in retail stores.",
   },
   {
     id: "test-2",
-    name: "Dr. Marcus Chen",
-    role: "Integrative Nutritionist",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=120&auto=format&fit=crop",
+    name: "Turkish Apricots",
+    role: "Sun-Dried & Sulfur-Free",
+    image: "https://images.unsplash.com/photo-1595122245592-4545305a4170?q=80&w=200&auto=format&fit=crop",
     rating: 5,
-    quote: "I recommend Kannu to all my patients. Sourcing clean, organic whole foods with documented chemical-free growing practices is vital. Their cold-pressed elixirs are a masterpiece.",
+    quote: "Sourcing clean, organic whole foods with documented chemical-free growing practices is vital. These apricots are incredibly chewy and naturally sweet.",
   },
   {
     id: "test-3",
-    name: "Sophia Lindqvist",
-    role: "Sustainable Designer",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=120&auto=format&fit=crop",
+    name: "Aegean Pistachios",
+    role: "Hand-Picked & Dry Roasted",
+    image: "https://images.unsplash.com/photo-1527324688151-0e627063f2b1?q=80&w=200&auto=format&fit=crop",
     rating: 5,
-    quote: "I am wowed by their fully compostable delivery pulp and electric fleet dispatch. Kannu proves that luxury organic gastronomy and environment protection can coexist.",
+    quote: "I am wowed by the freshness! Every pistachio is perfectly opened and roasted to perfection. Kannu proves that luxury organic gastronomy is achievable.",
   },
 ];
 
@@ -50,9 +50,9 @@ export const Testimonials: React.FC = () => {
         {/* Section Title */}
         <AnimatedReveal direction="up" delay={0.1}>
           <SectionTitle
-            subtitle="Client Journal"
+            subtitle="Customer Favorites"
             title="Conscious Voices"
-            description="Read the genuine reviews of chefs, nutrition experts, and gourmet home-cooks who have transformed their pantry with our harvest."
+            description="Read why our premium selection of dry fruits and seeds has become a staple for healthy gourmet home-cooks."
             align="center"
             className="mb-16"
           />
@@ -64,48 +64,42 @@ export const Testimonials: React.FC = () => {
             <AnimatedReveal
               key={test.id}
               direction="up"
-              delay={0.15 + idx * 0.05}
-              className="flex"
+              delay={0.2 + idx * 0.1}
             >
-              <motion.div
-                whileHover={{ y: -6 }}
-                transition={{ duration: 0.3 }}
-                className="bg-white rounded-[2rem] p-8 border border-organic-green/5 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between"
-              >
-                {/* Quote Icon Background decoration */}
-                <Quote className="absolute top-6 right-8 h-8 w-8 text-organic-yellow/20" />
-
-                <div>
-                  {/* Rating Stars */}
-                  <div className="flex items-center gap-1 mb-5">
-                    {[...Array(test.rating)].map((_, i) => (
-                      <Star key={i} className="h-4.5 w-4.5 fill-organic-yellow text-organic-yellow" />
-                    ))}
-                  </div>
-
-                  {/* Quote text */}
-                  <p className="text-xs sm:text-sm text-organic-darkGreen/85 font-sans leading-relaxed italic mb-8">
-                    “{test.quote}”
-                  </p>
+              <div className="bg-white rounded-[2.5rem] p-8 border border-organic-green/5 shadow-sm hover:shadow-md transition-shadow relative h-full flex flex-col">
+                <div className="absolute top-8 right-8 text-organic-yellow/20">
+                  <Quote className="h-12 w-12 fill-current" />
                 </div>
 
-                {/* Author Info */}
-                <div className="flex items-center gap-3 pt-4 border-t border-organic-green/5">
-                  <div className="relative h-10 w-10 rounded-full overflow-hidden bg-organic-cream">
+                {/* Rating Stars */}
+                <div className="flex gap-1 mb-6">
+                  {[...Array(test.rating)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-organic-yellow text-organic-yellow" />
+                  ))}
+                </div>
+
+                {/* Quote Content */}
+                <p className="text-sm text-organic-darkGreen/80 leading-relaxed italic mb-8 flex-1">
+                  &ldquo;{test.quote}&rdquo;
+                </p>
+
+                {/* Profile Area */}
+                <div className="flex items-center gap-4">
+                  <div className="relative h-14 w-14 rounded-2xl overflow-hidden border-2 border-organic-cream bg-organic-cream">
                     <Image
                       src={test.image}
                       alt={test.name}
                       fill
                       className="object-cover"
-                      sizes="40px"
+                      sizes="56px"
                     />
                   </div>
                   <div>
-                    <h4 className="font-sans font-bold text-xs text-organic-green">{test.name}</h4>
-                    <span className="text-[10px] text-organic-darkGreen/55 font-medium">{test.role}</span>
+                    <h4 className="font-serif text-base font-bold text-organic-green">{test.name}</h4>
+                    <p className="text-[10px] uppercase tracking-wider font-bold text-organic-sage">{test.role}</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </AnimatedReveal>
           ))}
         </div>

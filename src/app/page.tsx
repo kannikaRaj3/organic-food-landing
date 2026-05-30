@@ -4,7 +4,7 @@ import Hero from "@/sections/Hero";
 import FeaturedProducts from "@/sections/FeaturedProducts";
 import WhyChooseUs from "@/sections/WhyChooseUs";
 import IngredientStory from "@/sections/IngredientStory";
-import JuicePromotion from "@/sections/JuicePromotion";
+import JuicePromotion from "@/sections/SuperfoodPromotion";
 import Testimonials from "@/sections/Testimonials";
 import Newsletter from "@/sections/Newsletter";
 import Footer from "@/sections/Footer";
