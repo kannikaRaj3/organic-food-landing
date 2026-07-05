@@ -27,6 +27,30 @@ const INDIAN_STATES = [
   "Uttarakhand","West Bengal","Delhi","Jammu & Kashmir","Ladakh",
 ];
 
+// ── Defined OUTSIDE CheckoutPage so it is never re-created on re-render ──
+function InputField({ label, id, value, onChange, placeholder, error, type = "text", icon }: {
+  label: string; id: string; value: string; onChange: (v: string) => void;
+  placeholder?: string; error?: string; type?: string; icon?: React.ReactNode;
+}) {
+  return (
+    <div className="flex flex-col gap-1">
+      <label htmlFor={id} className="text-xs font-semibold text-organic-darkGreen/70 uppercase tracking-wider">{label}</label>
+      <div className="relative">
+        {icon && <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-organic-darkGreen/30">{icon}</span>}
+        <input
+          id={id}
+          type={type}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          placeholder={placeholder}
+          className={`w-full ${icon ? "pl-10" : "pl-4"} pr-4 py-3 rounded-xl border text-sm text-organic-darkGreen bg-white focus:outline-none focus:ring-2 focus:ring-organic-green/40 transition-all ${error ? "border-rose-400 bg-rose-50/30" : "border-organic-green/15 hover:border-organic-green/30"}`}
+        />
+      </div>
+      {error && <span className="text-[11px] text-rose-500 font-medium">{error}</span>}
+    </div>
+  );
+}
+
 export default function CheckoutPage() {
   const { cartItems, cartTotal, cartCount, updateQuantity, removeFromCart, clearCart } = useCart();
   const [step, setStep] = useState<Step>("cart");
@@ -84,26 +108,6 @@ export default function CheckoutPage() {
     setIsPlacing(false);
   };
 
-  const InputField = ({ label, id, value, onChange, placeholder, error, type = "text", icon }: {
-    label: string; id: keyof FormData; value: string; onChange: (v: string) => void;
-    placeholder?: string; error?: string; type?: string; icon?: React.ReactNode;
-  }) => (
-    <div className="flex flex-col gap-1">
-      <label htmlFor={id} className="text-xs font-semibold text-organic-darkGreen/70 uppercase tracking-wider">{label}</label>
-      <div className="relative">
-        {icon && <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-organic-darkGreen/30">{icon}</span>}
-        <input
-          id={id}
-          type={type}
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          placeholder={placeholder}
-          className={`w-full ${icon ? "pl-10" : "pl-4"} pr-4 py-3 rounded-xl border text-sm text-organic-darkGreen bg-white focus:outline-none focus:ring-2 focus:ring-organic-green/40 transition-all ${error ? "border-rose-400 bg-rose-50/30" : "border-organic-green/15 hover:border-organic-green/30"}`}
-        />
-      </div>
-      {error && <span className="text-[11px] text-rose-500 font-medium">{error}</span>}
-    </div>
-  );
 
   // ── SUCCESS SCREEN ──
   if (step === "success") {
