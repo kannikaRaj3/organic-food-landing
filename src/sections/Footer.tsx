@@ -87,11 +87,11 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-2 space-y-4">
             <h4 className="font-serif text-sm font-bold text-white uppercase tracking-wider">Market Pantry</h4>
             <ul className="space-y-2 text-xs text-organic-cream/65">
-              <li><a href="#products" className="hover:text-organic-yellow transition-colors">Roasted Nuts</a></li>
-              <li><a href="#products" className="hover:text-organic-yellow transition-colors">Sun-Dried Fruits</a></li>
-              <li><a href="#products" className="hover:text-organic-yellow transition-colors">Organic Seeds</a></li>
-              <li><a href="#products" className="hover:text-organic-yellow transition-colors">Trail Mixes</a></li>
-              <li><a href="#products" className="hover:text-organic-yellow transition-colors">Nut Butters</a></li>
+              <li><a href="/pantry?cat=Nuts" className="hover:text-organic-yellow transition-colors">Roasted Nuts</a></li>
+              <li><a href="/pantry?cat=Dry+Fruits" className="hover:text-organic-yellow transition-colors">Sun-Dried Fruits</a></li>
+              <li><a href="/pantry?cat=Seeds" className="hover:text-organic-yellow transition-colors">Organic Seeds</a></li>
+              <li><a href="/pantry?cat=Mixes" className="hover:text-organic-yellow transition-colors">Trail Mixes</a></li>
+              <li><a href="/pantry" className="hover:text-organic-yellow transition-colors">Full Pantry</a></li>
             </ul>
           </div>
 
@@ -112,16 +112,16 @@ export const Footer: React.FC = () => {
             <h4 className="font-serif text-sm font-bold text-white uppercase tracking-wider">Contact & Support</h4>
             <ul className="space-y-3.5 text-xs text-organic-cream/70">
               <li className="flex items-start gap-2.5">
-                <MapPin className="h-4.5 w-4.5 text-organic-yellow flex-shrink-0 mt-0.5" />
-                <span>120 Organic Way, Ste 300, San Francisco, CA 94107</span>
+                <MapPin className="h-4 w-4 text-organic-yellow flex-shrink-0 mt-0.5" />
+                <span>42 Organic Way, Andheri West, Mumbai, Maharashtra 400053</span>
               </li>
               <li className="flex items-center gap-2.5">
-                <Phone className="h-4.5 w-4.5 text-organic-yellow flex-shrink-0" />
-                <span>+1 (800) 555-KANNU</span>
+                <Phone className="h-4 w-4 text-organic-yellow flex-shrink-0" />
+                <span>+91 98765 43210</span>
               </li>
               <li className="flex items-center gap-2.5">
-                <Mail className="h-4.5 w-4.5 text-organic-yellow flex-shrink-0" />
-                <span>concierge@kannu-market.com</span>
+                <Mail className="h-4 w-4 text-organic-yellow flex-shrink-0" />
+                <span>support@kannu-market.in</span>
               </li>
             </ul>
           </div>

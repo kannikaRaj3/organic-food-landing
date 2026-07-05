@@ -60,7 +60,7 @@ export const IngredientStory: React.FC = () => {
       delay: 0.1,
     },
     {
-      image: "https://images.unsplash.com/photo-1596720426673-e483d74ed721?q=80&w=400&auto=format&fit=crop",
+      image: "/images/chia-seeds.png",
       title: "Black Chia Seeds",
       description: "Premium omega-rich seeds sourced from sustainable highland cooperatives in Central America.",
       rotation: "lg:-rotate-3 hover:rotate-0",
@@ -76,7 +76,7 @@ export const IngredientStory: React.FC = () => {
       delay: 0.3,
     },
     {
-      image: "https://images.unsplash.com/photo-1589314418659-197e4125860d?q=80&w=400&auto=format&fit=crop",
+      image: "/images/walnuts.png",
       title: "California Walnuts",
       description: "Slow-dried shelled walnuts from organic growers, containing highly active omega-3 fats.",
       rotation: "lg:-rotate-2 hover:rotate-0",

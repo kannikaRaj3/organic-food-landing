@@ -1,174 +1,126 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, Leaf } from "lucide-react";
+import { ArrowRight, Leaf, Gift, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedReveal from "@/components/ui/animated-reveal";
+import { useCart } from "@/context/CartContext";
 
-interface BottleProps {
-  type: "orange" | "mango" | "green";
-  title: string;
-  subtitle: string;
-  gradient: string;
-  delay: number;
-  yOffset: number[];
-}
+const giftItems = [
+  { src: "/images/almonds.png", alt: "Almonds", label: "Almonds", delay: 0, offset: [0, -14, 0] as number[] },
+  { src: "/images/cashews.png", alt: "Cashews", label: "Cashews", delay: 0.5, offset: [-10, 4, -10] as number[] },
+  { src: "/images/apricots.png", alt: "Apricots", label: "Apricots", delay: 1, offset: [6, -10, 6] as number[] },
+  { src: "/images/walnuts.png", alt: "Walnuts", label: "Walnuts", delay: 1.5, offset: [0, 12, 0] as number[] },
+];
 
-const JuiceBottle: React.FC<BottleProps> = ({
-  type,
-  title,
-  subtitle,
-  gradient,
-  delay,
-  yOffset,
-}) => {
-  return (
-    <motion.div
-      animate={{ y: yOffset }}
-      transition={{
-        duration: 5,
-        repeat: Infinity,
-        ease: "easeInOut",
-        delay: delay,
-      }}
-      className="relative group cursor-pointer flex flex-col items-center select-none"
-    >
-      {/* Bottle Cap */}
-      <div className="w-8 h-3.5 bg-organic-green rounded-t-sm shadow-sm z-10 border-b border-organic-green/20" />
-      
-      {/* Bottle Neck */}
-      <div className="w-6 h-7 bg-white/20 backdrop-blur-[1px] relative border-x border-white/10 z-10">
-        <div className="absolute inset-y-0 left-1 w-1 bg-white/10" />
-      </div>
+export const GiftBoxPromotion: React.FC = () => {
+  const { addToCart } = useCart();
 
-      {/* Bottle Body */}
-      <div className={`w-24 h-56 rounded-t-3xl rounded-b-[2rem] bg-gradient-to-b ${gradient} relative shadow-lg group-hover:shadow-2xl transition-shadow duration-500 overflow-hidden flex flex-col justify-center items-center`}>
-        {/* Glass Reflection Highlight */}
-        <div className="absolute top-2 left-3 bottom-2 w-2 bg-white/15 rounded-full filter blur-[1px] pointer-events-none" />
-        <div className="absolute top-2 right-4 bottom-2 w-1.5 bg-black/5 rounded-full filter blur-[0.5px] pointer-events-none" />
-
-        {/* Minimalist Label */}
-        <div className="w-18 h-28 bg-[#FFFDF9]/95 rounded-xl border border-organic-green/5 shadow-sm p-2 flex flex-col justify-between items-center text-center">
-          <div className="flex flex-col items-center">
-            <span className="font-serif text-[10px] tracking-wider text-organic-sage uppercase font-bold">Kannu</span>
-            <div className="h-0.5 w-4 bg-organic-sage/40 my-1" />
-          </div>
-          <div>
-            <h5 className="font-serif text-xs font-black text-organic-green tracking-tight leading-none mb-0.5">
-              {title}
-            </h5>
-            <span className="text-[7px] font-semibold text-organic-darkGreen/50 uppercase tracking-widest block scale-90">
-              {subtitle}
-            </span>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="h-0.5 w-4 bg-organic-sage/40 my-1" />
-            <span className="text-[6px] text-organic-green/60 font-bold uppercase tracking-wider">Raw Elixir</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Shadow under bottle */}
-      <div className="w-16 h-2 bg-black/5 blur-[2px] rounded-full mt-4 group-hover:scale-110 transition-transform duration-500" />
-    </motion.div>
-  );
-};
-
-export const JuicePromotion: React.FC = () => {
   return (
     <section id="specials" className="py-24 px-6 md:px-12 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        
         {/* Promotional Main Card */}
         <div className="relative w-full rounded-[3.5rem] bg-gradient-to-br from-[#1E2F20] to-[#2E4731] border border-white/5 p-8 sm:p-12 lg:p-16 shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Background overlay details */}
           <div className="absolute top-[-30%] right-[-10%] w-96 h-96 rounded-full bg-organic-sage/10 blur-3xl pointer-events-none" />
           <div className="absolute bottom-[-20%] left-[-10%] w-72 h-72 rounded-full bg-organic-yellow/5 blur-3xl pointer-events-none" />
-          
-          {/* Left Text details */}
+
+          {/* Left Text */}
           <div className="lg:col-span-6 z-10 text-organic-cream">
             <AnimatedReveal direction="right" delay={0.1}>
-              {/* Badge */}
               <div className="inline-flex items-center gap-1.5 bg-organic-yellow text-organic-darkGreen text-[10px] uppercase font-bold tracking-wider px-3.5 py-1.5 rounded-full mb-6 shadow-sm">
-                <Leaf className="h-3 w-3 fill-current" />
-                <span>Special Introductory Pack</span>
+                <Gift className="h-3 w-3 fill-current" />
+                <span>Premium Gift Collection</span>
               </div>
             </AnimatedReveal>
 
             <AnimatedReveal direction="right" delay={0.2}>
               <h3 className="text-3xl sm:text-5xl font-black font-serif tracking-tight leading-[1.1] mb-6">
-                Cold-Pressed <br />
-                Organic Juice Elixirs
+                The Kannu<br />
+                Royal Gift Box
               </h3>
             </AnimatedReveal>
 
             <AnimatedReveal direction="right" delay={0.3}>
-              <p className="text-xs sm:text-sm text-organic-cream/80 max-w-md leading-relaxed mb-8">
-                Raw, unpasteurized fruit and botanical blends. Cold-pressed using 10 tons of pressure, 
-                retaining 100% of organic enzymes and live minerals. No added sugars, preservatives, or water.
+              <p className="text-xs sm:text-sm text-organic-cream/80 max-w-md leading-relaxed mb-4">
+                A curated premium selection of our finest organic dry fruits, nuts, and seeds — beautifully
+                gift-packaged in an eco-friendly wooden box. Perfect for festivals, celebrations, and corporate gifting.
               </p>
+              <div className="flex flex-wrap gap-3 mb-8">
+                {["Almonds 100g", "Cashews 100g", "Pistachios 75g", "Walnuts 75g", "Apricots 100g", "Figs 50g"].map((item) => (
+                  <span key={item} className="inline-flex items-center gap-1 text-[10px] text-organic-cream/70 bg-white/5 border border-white/10 px-2.5 py-1 rounded-full">
+                    <Leaf className="h-2.5 w-2.5 text-organic-yellow" /> {item}
+                  </span>
+                ))}
+              </div>
             </AnimatedReveal>
 
-            {/* Discount promo and CTA */}
             <AnimatedReveal direction="right" delay={0.4} className="flex flex-wrap items-center gap-6">
               <div className="flex flex-col">
-                <span className="text-[10px] uppercase tracking-wider text-organic-yellow font-bold">Introductory Price</span>
+                <span className="text-[10px] uppercase tracking-wider text-organic-yellow font-bold">Special Price</span>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-black">$18.90</span>
-                  <span className="text-xs text-organic-cream/50 line-through">$24.99</span>
-                  <span className="text-xs text-organic-yellow/90 font-bold">(25% Off)</span>
+                  <span className="text-3xl font-black">₹2,499</span>
+                  <span className="text-xs text-organic-cream/50 line-through">₹3,299</span>
+                  <span className="text-xs text-organic-yellow/90 font-bold">(24% Off)</span>
                 </div>
-                <span className="text-[9px] text-organic-cream/40 mt-1">Includes 3 x 12 oz botanical blends</span>
+                <div className="flex items-center gap-1 mt-1">
+                  {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-organic-yellow text-organic-yellow" />)}
+                  <span className="text-[9px] text-organic-cream/50 ml-1">4.9 · 312 reviews</span>
+                </div>
               </div>
 
               <Button
                 variant="yellow"
                 size="lg"
                 className="bg-organic-yellow hover:bg-[#E9B127] text-organic-darkGreen rounded-full flex items-center gap-2 group font-semibold shadow-md shadow-organic-yellow/10"
+                onClick={() => addToCart({ id: "gift-box-royal", name: "Kannu Royal Gift Box", price: 2499, image: "/images/almonds.png" })}
               >
-                Order Juice Pack
-                <ArrowRight className="h-4.5 w-4.5 group-hover:translate-x-1 transition-transform" />
+                Add Gift Box to Cart
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </AnimatedReveal>
           </div>
 
-          {/* Right Juice Bottles Composition */}
-          <div className="lg:col-span-6 flex justify-center items-center gap-4 sm:gap-8 min-h-[320px] relative z-10">
-            {/* Orange Juice */}
-            <JuiceBottle
-              type="orange"
-              title="SWEET ORANGE"
-              subtitle="Tangerine + Turmeric"
-              gradient="from-orange-400 via-amber-500 to-orange-600"
-              delay={0}
-              yOffset={[0, -12, 0]}
-            />
+          {/* Right — floating product images */}
+          <div className="lg:col-span-6 flex justify-center items-center min-h-[320px] relative z-10">
+            {/* Gift box backdrop circle */}
+            <div className="absolute w-52 h-52 rounded-full bg-organic-yellow/10 border border-organic-yellow/20 blur-sm" />
 
-            {/* Mango Juice */}
-            <JuiceBottle
-              type="mango"
-              title="MANGO BLISS"
-              subtitle="Ginger + Carrot"
-              gradient="from-yellow-400 via-orange-400 to-amber-600"
-              delay={1}
-              yOffset={[-10, 2, -10]}
-            />
+            {giftItems.map((item, i) => {
+              const positions = [
+                "top-[5%] left-[15%]",
+                "top-[5%] right-[10%]",
+                "bottom-[5%] left-[10%]",
+                "bottom-[5%] right-[15%]",
+              ];
+              return (
+                <motion.div
+                  key={item.alt}
+                  animate={{ y: item.offset }}
+                  transition={{ duration: 5 + i, repeat: Infinity, ease: "easeInOut", delay: item.delay }}
+                  className={`absolute ${positions[i]} flex flex-col items-center gap-1`}
+                >
+                  <div className="relative w-24 h-24 rounded-2xl overflow-hidden border-2 border-white/10 shadow-xl">
+                    <Image src={item.src} alt={item.alt} fill className="object-cover" sizes="96px" />
+                  </div>
+                  <span className="text-[9px] text-organic-cream/60 font-semibold uppercase tracking-wider">{item.label}</span>
+                </motion.div>
+              );
+            })}
 
-            {/* Green Detox */}
-            <JuiceBottle
-              type="green"
-              title="GREEN DETOX"
-              subtitle="Kale + Celery + Apple"
-              gradient="from-emerald-400 via-teal-500 to-emerald-600"
-              delay={0.5}
-              yOffset={[4, -8, 4]}
-            />
+            {/* Central gift label */}
+            <div className="relative z-10 flex flex-col items-center text-center bg-white/10 backdrop-blur-sm rounded-3xl px-6 py-5 border border-white/10">
+              <Gift className="h-8 w-8 text-organic-yellow mb-2" />
+              <span className="text-white font-serif font-bold text-lg leading-tight">Royal<br/>Gift Box</span>
+              <span className="text-[9px] text-organic-yellow/80 font-bold uppercase tracking-widest mt-1">500g Premium</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
 };
-export default JuicePromotion;
+export default GiftBoxPromotion;

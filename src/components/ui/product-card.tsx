@@ -106,7 +106,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <div className="flex flex-col">
           <span className="text-xs text-organic-darkGreen/50 font-medium">Price</span>
           <div className="flex items-baseline">
-            <span className="text-xl font-extrabold text-organic-green">${product.price}</span>
+            <span className="text-xl font-extrabold text-organic-green">₹{product.price.toLocaleString('en-IN')}</span>
             <span className="text-xs text-organic-darkGreen/60 ml-0.5">/{product.unit}</span>
           </div>
         </div>

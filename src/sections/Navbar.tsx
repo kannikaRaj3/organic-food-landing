@@ -26,9 +26,9 @@ export const Navbar: React.FC = () => {
   const navLinks = [
     { label: "Home", href: "#home" },
     { label: "Products", href: "#products" },
+    { label: "Pantry", href: "/pantry" },
     { label: "Why Us", href: "#why-us" },
     { label: "Our Story", href: "#story" },
-    { label: "Specials", href: "#specials" },
   ];
 
   const hasScrolled = scrollPosition > 20;
@@ -304,7 +304,7 @@ export const Navbar: React.FC = () => {
                           {item.name}
                         </h4>
                         <div className="text-xs text-organic-darkGreen/80 mt-0.5">
-                          ${item.price} each
+                          ₹{item.price.toLocaleString('en-IN')} each
                         </div>
 
                         {/* Quantity Counter */}
@@ -327,7 +327,7 @@ export const Navbar: React.FC = () => {
 
                       <div className="flex flex-col items-end gap-3 justify-between">
                         <span className="text-sm font-extrabold text-organic-green">
-                          ${(item.price * item.quantity).toFixed(2)}
+                          ₹{(item.price * item.quantity).toLocaleString('en-IN')}
                         </span>
                         <button
                           onClick={() => removeFromCart(item.id)}
@@ -348,7 +348,7 @@ export const Navbar: React.FC = () => {
                   <div className="space-y-2">
                     <div className="flex justify-between text-xs text-organic-darkGreen/60">
                       <span>Subtotal</span>
-                      <span>${cartTotal.toFixed(2)}</span>
+                      <span>₹{cartTotal.toLocaleString('en-IN')}</span>
                     </div>
                     <div className="flex justify-between text-xs text-organic-darkGreen/60">
                       <span>Eco-Delivery</span>
@@ -356,11 +356,14 @@ export const Navbar: React.FC = () => {
                     </div>
                     <div className="flex justify-between text-base font-bold text-organic-green pt-2 border-t border-organic-green/5">
                       <span>Estimated Total</span>
-                      <span className="text-lg font-extrabold">${cartTotal.toFixed(2)}</span>
+                      <span className="text-lg font-extrabold">₹{cartTotal.toLocaleString('en-IN')}</span>
                     </div>
                   </div>
 
-                  <Button className="w-full bg-organic-green hover:bg-organic-darkGreen text-white py-3.5 rounded-full flex items-center justify-center gap-2 group font-semibold shadow-md">
+                  <Button
+                    className="w-full bg-organic-green hover:bg-organic-darkGreen text-white py-3.5 rounded-full flex items-center justify-center gap-2 group font-semibold shadow-md"
+                    onClick={() => { setIsCartOpen(false); window.location.href = '/checkout'; }}
+                  >
                     Proceed to Checkout
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>

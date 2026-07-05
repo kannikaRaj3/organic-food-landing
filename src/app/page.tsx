@@ -4,7 +4,7 @@ import Hero from "@/sections/Hero";
 import FeaturedProducts from "@/sections/FeaturedProducts";
 import WhyChooseUs from "@/sections/WhyChooseUs";
 import IngredientStory from "@/sections/IngredientStory";
-import JuicePromotion from "@/sections/JuicePromotion";
+import GiftBoxPromotion from "@/sections/JuicePromotion";
 import Testimonials from "@/sections/Testimonials";
 import Newsletter from "@/sections/Newsletter";
 import Footer from "@/sections/Footer";
@@ -27,8 +27,8 @@ export default function Home() {
       {/* Editorial Ingredient Story */}
       <IngredientStory />
 
-      {/* Juice pack special offer */}
-      <JuicePromotion />
+      {/* Premium Gift Box special offer */}
+      <GiftBoxPromotion />
 
       {/* Customer voice reviews */}
       <Testimonials />

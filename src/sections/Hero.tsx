@@ -124,7 +124,7 @@ export const Hero: React.FC = () => {
             className="relative z-10 w-[240px] sm:w-[340px] lg:w-[390px] aspect-square rounded-full overflow-hidden shadow-2xl shadow-black/15 border-4 border-[#FFF8EE]"
           >
             <Image
-              src="https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?q=80&w=800&auto=format&fit=crop"
+              src="/images/hero-bowl.png"
               alt="Premium Bowl of Organic Dry Fruits and Nuts"
               fill
               priority
@@ -145,19 +145,19 @@ export const Hero: React.FC = () => {
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             className="absolute top-[12%] left-[10%] z-20 w-16 h-16 pointer-events-none"
           >
-            <div className="relative w-full h-full rounded-full overflow-hidden border border-white/20 shadow-md">
+            <div className="relative w-full h-full rounded-full overflow-hidden border border-white/20 shadow-md bg-white">
               <Image
-                src="https://images.unsplash.com/photo-1508815122820-2215947cc21c?q=80&w=200&auto=format&fit=crop"
+                src="/images/almonds.png"
                 alt="Floating Almond"
                 fill
                 priority
-                className="object-cover"
+                className="object-cover scale-[1.3]"
                 sizes="64px"
               />
             </div>
           </motion.div>
 
-          {/* Floating Cashew - Middle Right */}
+          {/* Floating Chia Seeds - Middle Right */}
           <motion.div
             animate={{
               y: [0, 15, 0],
@@ -167,10 +167,10 @@ export const Hero: React.FC = () => {
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
             className="absolute top-[28%] right-[5%] z-20 w-20 h-20 pointer-events-none"
           >
-            <div className="relative w-full h-full rounded-full overflow-hidden border border-white/20 shadow-md">
+            <div className="relative w-full h-full rounded-full overflow-hidden border border-white/20 shadow-md bg-white">
               <Image
-                src="https://images.unsplash.com/photo-1509070016581-915335451d79?q=80&w=200&auto=format&fit=crop"
-                alt="Floating Cashew"
+                src="/images/chia-seeds.png"
+                alt="Floating Chia Seeds"
                 fill
                 className="object-cover"
                 sizes="80px"
@@ -178,38 +178,44 @@ export const Hero: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Floating Walnut - Bottom Left */}
+          {/* Floating Pumpkin Seeds - Bottom Left */}
           <motion.div
             animate={{
               y: [0, 10, 0],
               x: [0, 12, 0]
             }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute bottom-[20%] left-[8%] z-20 w-10 h-10 bg-[#3F5485] rounded-full border border-white/20 shadow-sm flex items-center justify-center pointer-events-none"
+            className="absolute bottom-[20%] left-[8%] z-20 w-16 h-16 pointer-events-none"
           >
-            <div className="w-8 h-8 rounded-full overflow-hidden relative">
+            <div className="relative w-full h-full rounded-full overflow-hidden border border-white/20 shadow-md bg-white">
               <Image
-                src="https://images.unsplash.com/photo-1589314418659-197e4125860d?q=80&w=200&auto=format&fit=crop"
-                alt="Floating Walnut"
+                src="/images/pumpkin-seeds.png"
+                alt="Floating Pumpkin Seeds"
                 fill
                 className="object-cover"
-                sizes="40px"
+                sizes="64px"
               />
             </div>
           </motion.div>
 
-          {/* Floating Green Leaf - Bottom Right */}
+          {/* Floating Cashew - Bottom Right */}
           <motion.div
             animate={{
               y: [0, -15, 0],
-              rotate: [15, 30, 15]
+              rotate: [5, 15, 5]
             }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute bottom-[15%] right-[12%] z-20 w-14 h-14 pointer-events-none text-organic-leaf"
+            className="absolute bottom-[15%] right-[12%] z-20 w-16 h-16 pointer-events-none"
           >
-            <svg viewBox="0 0 24 24" className="w-full h-full fill-current filter drop-shadow-md">
-              <path d="M17 8C8 10 5.9 16.12 5.9 16.12S3 14 3 10c0-3.3 2.7-6 6-6 4 0 7 2.5 8 4zm3.92 5.08c-.08-.08-.2-.11-.3-.07-2.3.93-3.8 2.3-4.5 4.14-.04.1.01.21.1.25.1.04.21-.01.25-.1.64-1.7 2-3 4.13-3.85.11-.05.15-.17.1-.28-.02-.03-.04-.06-.08-.09z" />
-            </svg>
+            <div className="relative w-full h-full rounded-full overflow-hidden border border-white/20 shadow-md bg-white">
+              <Image
+                src="/images/cashews.png"
+                alt="Floating Cashew"
+                fill
+                className="object-cover"
+                sizes="64px"
+              />
+            </div>
           </motion.div>
         </div>
       </div>

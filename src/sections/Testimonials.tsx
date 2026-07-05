@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 import SectionTitle from "@/components/ui/section-title";
@@ -11,7 +10,8 @@ interface Testimonial {
   id: string;
   name: string;
   role: string;
-  image: string;
+  initials: string;
+  avatarColor: string;
   rating: number;
   quote: string;
 }
@@ -21,25 +21,28 @@ const testimonials: Testimonial[] = [
     id: "test-1",
     name: "Eleanor Sterling",
     role: "Culinary Blogger & Pastry Chef",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120&auto=format&fit=crop",
+    initials: "ES",
+    avatarColor: "bg-amber-500",
     rating: 5,
-    quote: "The rosemary sourdough is absolutely exquisite! Sourdough of this caliber is rare. The tomatoes arrived smelling of fresh soil—unmistakable proof of true vine-ripening.",
+    quote: "The almonds and pistachios are absolutely exquisite! Quality of this caliber is rare. The dry fruits arrived with an unmistakable freshness — proof of true farm-to-door sourcing.",
   },
   {
     id: "test-2",
     name: "Dr. Marcus Chen",
     role: "Integrative Nutritionist",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=120&auto=format&fit=crop",
+    initials: "MC",
+    avatarColor: "bg-emerald-600",
     rating: 5,
-    quote: "I recommend Kannu to all my patients. Sourcing clean, organic whole foods with documented chemical-free growing practices is vital. Their cold-pressed elixirs are a masterpiece.",
+    quote: "I recommend Kannu to all my patients. Sourcing clean, organic whole foods with documented chemical-free growing practices is vital. Their chia and flax seeds are a nutritional masterpiece.",
   },
   {
     id: "test-3",
     name: "Sophia Lindqvist",
-    role: "Sustainable Designer",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=120&auto=format&fit=crop",
+    role: "Sustainable Lifestyle Designer",
+    initials: "SL",
+    avatarColor: "bg-teal-600",
     rating: 5,
-    quote: "I am wowed by their fully compostable delivery pulp and electric fleet dispatch. Kannu proves that luxury organic gastronomy and environment protection can coexist.",
+    quote: "I am wowed by their fully compostable delivery packaging and commitment to zero waste. Kannu proves that luxury organic nutrition and environmental protection can coexist beautifully.",
   },
 ];
 
@@ -70,7 +73,7 @@ export const Testimonials: React.FC = () => {
               <motion.div
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white rounded-[2rem] p-8 border border-organic-green/5 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between"
+                className="bg-white rounded-[2rem] p-8 border border-organic-green/5 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between w-full"
               >
                 {/* Quote Icon Background decoration */}
                 <Quote className="absolute top-6 right-8 h-8 w-8 text-organic-yellow/20" />
@@ -79,26 +82,20 @@ export const Testimonials: React.FC = () => {
                   {/* Rating Stars */}
                   <div className="flex items-center gap-1 mb-5">
                     {[...Array(test.rating)].map((_, i) => (
-                      <Star key={i} className="h-4.5 w-4.5 fill-organic-yellow text-organic-yellow" />
+                      <Star key={i} className="h-4 w-4 fill-organic-yellow text-organic-yellow" />
                     ))}
                   </div>
 
                   {/* Quote text */}
                   <p className="text-xs sm:text-sm text-organic-darkGreen/85 font-sans leading-relaxed italic mb-8">
-                    “{test.quote}”
+                    &ldquo;{test.quote}&rdquo;
                   </p>
                 </div>
 
-                {/* Author Info */}
+                {/* Author Info with Initials Avatar */}
                 <div className="flex items-center gap-3 pt-4 border-t border-organic-green/5">
-                  <div className="relative h-10 w-10 rounded-full overflow-hidden bg-organic-cream">
-                    <Image
-                      src={test.image}
-                      alt={test.name}
-                      fill
-                      className="object-cover"
-                      sizes="40px"
-                    />
+                  <div className={`h-10 w-10 rounded-full ${test.avatarColor} flex items-center justify-center flex-shrink-0`}>
+                    <span className="text-white text-xs font-bold tracking-wide">{test.initials}</span>
                   </div>
                   <div>
                     <h4 className="font-sans font-bold text-xs text-organic-green">{test.name}</h4>
